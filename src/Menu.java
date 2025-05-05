@@ -26,13 +26,14 @@ public class Menu {
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Velkommen Hr. Formand. Indtast venligst kode:");
+        System.out.println("Welcome Sir Chairman. Please enter password:");
         String chairmanCodeInput = scan.nextLine();
 
         String chairmanCode = "Jegerformand";
         // der skal bruges et while loop et sted her
+
         if (chairmanCodeInput.equals(chairmanCode)) {
-            System.out.println("Ugyldig kode, prøv igen");
+            System.out.println("Invalid code, try again");
         }
 
     }
