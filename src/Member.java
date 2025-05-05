@@ -10,7 +10,7 @@ public class Member {
    private int ageGroup;
    private int teamId;
 
-   // konstruktor
+
     public void member (String name , String memberType , String swimmerType , int memberID , int ageGroup , int teamId , LocalDateTime dateOfBirth){
         this.name=name;
         this.ageGroup=ageGroup;
@@ -50,15 +50,6 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
-                "memberID=" + memberID +
-                ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", memberType='" + memberType + '\'' +
-                ", swimmerType='" + swimmerType + '\'' +
-                ", ageGroup=" + ageGroup +
-                ", teamId=" + teamId +
-                '}';
+        return "Member{" + "memberID=" + memberID + ", name='" + name + '\'' + ", dateOfBirth=" + dateOfBirth + ", memberType='" + memberType + '\'' + ", swimmerType='" + swimmerType + '\'' + ", ageGroup=" + ageGroup + ", teamId=" + teamId + '}';
     }
-
 }
