@@ -4,43 +4,51 @@ public class PerformanceRecord {
 
     private int memberID;
     private int recordID;
-    private int diciplineID;
-    private LocalDateTime trainingBestDate;
+    private int disciplineID;
+    private String trainingBestDate;
     private String trainingBestTime;
 
-    public PerformanceRecord(int memberID , int recordID , int diciplineID , LocalDateTime trainingBestDate , String trainingBestTime ){
-        this.memberID=memberID;
-        this.diciplineID=diciplineID;
-        this.recordID=recordID;
-        this.trainingBestDate=trainingBestDate;
-        this.trainingBestTime=trainingBestTime;
-
-    }
-    public String getTrainingBestTime(){
-        return trainingBestTime;
+    public PerformanceRecord(int memberID, int recordID, int disciplineID, String trainingBestDate, String trainingBestTime) {
+        this.memberID = memberID;
+        this.recordID = recordID;
+        this.disciplineID = disciplineID;
+        this.trainingBestDate = trainingBestDate;
+        this.trainingBestTime = trainingBestTime;
     }
 
-    public int getMemberID(){
-        return memberID;
-    }
+public String getTrainingBestTime(){
+    return trainingBestTime;
+}
 
-    public int getRecordID(){
-        return recordID;
-    }
+public int getMemberID(){
+    return memberID;
+}
 
-    public int getDiciplineID(){
-        return diciplineID;
+public int getRecordID(){
+    return recordID;
+}
 
-    }
-
-    public LocalDateTime getTrainingBestDate(){
-        return trainingBestDate;
-
-    }
-    @Override
-    public String toString() {
-        return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + diciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
-    }
+public int getDiciplineID(){
+    return disciplineID;
 
 }
+
+public LocalDateTime getTrainingBestDate(){
+    return trainingBestDate;
+}
+@Override
+public String toString() {
+    return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + diciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
+}
+
+}
+
+
+
+
+
+
+
+
+
 
