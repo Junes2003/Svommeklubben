@@ -1,7 +1,6 @@
 public class PerformanceRecord {
 
-    private int mebmerID;
-    private int
+    private int memberID;
 
 
 

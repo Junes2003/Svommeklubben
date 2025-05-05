@@ -10,8 +10,7 @@ public class Member {
    private int ageGroup;
    private int teamId;
 
-
-    public void member (String name , String memberType , String swimmerType , int memberID , int ageGroup , int teamId , LocalDateTime dateOfBirth){
+    public Member (String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamId, LocalDateTime dateOfBirth){
         this.name=name;
         this.ageGroup=ageGroup;
         this.dateOfBirth=dateOfBirth;
