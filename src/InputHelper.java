@@ -8,7 +8,7 @@ public class InputHelper {
     public static final String RESET = "\u001B[0m"; // Nulstil farve
     public static final String BOLD = "\u001B[1m"; // Fed skrift
 
-    // Privat og tom ekonstruktor for at forhindre oprettelse af objekt
+    // Privat og tom konstruktor for at forhindre oprettelse af objekt
     private InputHelper() {}
 
     // Henter et heltal fra brugeren

@@ -10,20 +10,28 @@ public class Menu {
     }
 
     public void initializeMenu() {
-        System.out.println("1 - Formand");
-        System.out.println("2 - Kasserer");
-        System.out.println("3 - Træner");
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("1 - Chairman");
+        System.out.println("2 - Accountant");
+        System.out.println("3 - Coach");
+
+        int menuInput = scan.nextInt();
+
+        switch (menuInput) {
+            case 1 -> chairmanMenu();
+        }
     }
 
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Velkommen Hr. Formand. Indtast venligst kode:");
-        int chairmanCodeInput = scan.nextInt();
+        String chairmanCodeInput = scan.nextLine();
 
         String chairmanCode = "Jegerformand";
-
-        if () {
+        // der skal bruges et while loop et sted her
+        if (chairmanCodeInput.equals(chairmanCode)) {
             System.out.println("Ugyldig kode, prøv igen");
         }
 
