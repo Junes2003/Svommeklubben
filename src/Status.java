@@ -1,3 +1,3 @@
 public enum Status {
-    ACTIVE, PASSIVE
+    ACTIVE, PASSIVE, SETUR
 }
