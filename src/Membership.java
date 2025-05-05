@@ -1,4 +1,3 @@
-
 import java.time.LocalDateTime;
 
 public class Membership extends Member {
