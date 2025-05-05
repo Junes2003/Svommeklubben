@@ -15,4 +15,6 @@ public class Menu {
     public List<Member> getMembers() { // Giver adgang til listen over pizzaer
         return clubMembers;
     }
+
+
 }
