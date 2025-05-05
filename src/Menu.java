@@ -19,6 +19,7 @@ public class Menu {
     public void initializeMenu() {
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Choose an option, please");
         System.out.println("1 - Chairman");
         System.out.println("2 - Accountant");
         System.out.println("3 - Coach");
@@ -28,7 +29,7 @@ public class Menu {
         switch (menuInput) {
             case 1 -> chairmanMenu();
             case 2 -> accountantMenu();
-            case 3 ->
+            case 3 -> coachMenu();
         }
     }
 
