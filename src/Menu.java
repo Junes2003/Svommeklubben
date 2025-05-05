@@ -9,17 +9,22 @@ public class Menu {
         clubMembers = new ArrayList<>();
     }
 
+    public void initializeMenu() {
+        System.out.println("1 - Formand");
+        System.out.println("2 - Kasserer");
+        System.out.println("3 - Træner");
+    }
+
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Velkommen Hr. Formand. Indtast venligst kode:");
-        String chairmanCodeInput = scan.nextLine();
+        int chairmanCodeInput = scan.nextInt();
 
         String chairmanCode = "Jegerformand";
 
-        if (!chairmanCodeInput.equals(chairmanCode)) {
+        if () {
             System.out.println("Ugyldig kode, prøv igen");
-            chairmanCodeInput = scan.nextLine();
         }
 
     }
