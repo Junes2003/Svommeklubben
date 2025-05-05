@@ -1,5 +1,3 @@
-import java.time.LocalDateTime;
-
 public class PerformanceRecord {
 
     private int memberID;
@@ -33,12 +31,12 @@ public int getDiciplineID(){
 
 }
 
-public LocalDateTime getTrainingBestDate(){
+public String getTrainingBestDate(){
     return trainingBestDate;
 }
 @Override
 public String toString() {
-    return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + diciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
+    return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + disciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
 }
 
 }
