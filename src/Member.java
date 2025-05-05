@@ -22,6 +22,7 @@ public class Member {
 
     }
 
+
     public String getName(){
         return name;
     }
@@ -41,7 +42,6 @@ public class Member {
     public int getTeamId(){
         return teamId;
     }
-
 
     public LocalDateTime getDateOfBirth() {
         return dateOfBirth;
