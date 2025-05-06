@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -57,6 +58,18 @@ public class Menu {
                 System.out.println("0 - Exit");
 
             }
+            // Kun en prøve
+//            File file = new File("ActiveMebmerCSV");
+//            try {
+//                scanner reader = Scanner(File):
+//                while (reader.hasNextLine);
+//                System.out.println(reader.NextLine);
+//
+//            }
+//            reader.close();
+//            } catch (fileNotFoundException e){
+//            System.out.println("Error while reading file");
+//        }
 
 
 
