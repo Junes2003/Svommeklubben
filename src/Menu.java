@@ -106,7 +106,7 @@ public class Menu {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
             System.out.println("مرحبا بك, Coach");
-            System.out.println("1 - Stats");
+            System.out.println("\n1 - Stats");
             System.out.println("2 - See team");
             System.out.println("0 - Exit");
 
