@@ -38,7 +38,7 @@ public class Menu {
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
-        while (true) {
+        if (true) {
             System.out.println("Please enter password:");
             String chairmanCodeInput = scan.nextLine();
 
@@ -59,7 +59,7 @@ public class Menu {
                 System.out.println("0 - Exit");
             }
 
-            // IKKE SLET, VI SKAL BRUGE DET OM LIDT
+//             IKKE SLET, VI SKAL BRUGE DET OM LIDT
 //            int chairmanMenuInput = scan.nextInt();
 //            switch (chairmanMenuInput) {
 //                case 1 -> registerMember();
