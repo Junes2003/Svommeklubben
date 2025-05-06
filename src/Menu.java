@@ -8,7 +8,6 @@ public class Menu {
     private List<PerformanceRecord> performanceRecords;
     private List<Membership> memberships;
 
-
     public Menu (){
         clubMembers = new ArrayList<>();
         teams = new ArrayList<>();
@@ -17,6 +16,7 @@ public class Menu {
     }
 
     public void initializeMenu() {
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Choose an option, please");
@@ -42,8 +42,8 @@ public class Menu {
         String chairmanCode = "Jegerformand";
         // der skal bruges et while loop et sted her
 
-        if (chairmanCodeInput.equals(chairmanCode)) {
-            System.out.println("Invalid code, try again");
+        if (!chairmanCodeInput.equals(chairmanCode)) {
+            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
         }
 
     }
@@ -56,8 +56,8 @@ public class Menu {
 
         String accountantCode = "Jegerkasserer";
         // der skal bruges et while loop et sted her
-        if (accountantCodeInput.equals(accountantCode)) {
-            System.out.println("Invalid code, try again!");
+        if (!accountantCodeInput.equals(accountantCode)) {
+            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         }
 
     }
@@ -70,8 +70,10 @@ public class Menu {
 
         String coachCode = "Jegertræner";
         // der skal bruges et while loop et sted her
-        if (coachCodeInput.equals(coachCode)) {
-            System.out.println("Invalid code, try again!");
+        if (!coachCodeInput.equals(coachCode)) {
+            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
+        } else {
+            System.out.println("صباح الخير, Træner");
         }
 
     }
@@ -79,6 +81,5 @@ public class Menu {
     public List<Member> getMembers() {
         return clubMembers;
     }
-
 
 }
