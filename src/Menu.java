@@ -42,21 +42,26 @@ public class Menu {
             System.out.println("Please enter password:");
             String chairmanCodeInput = scan.nextLine();
 
+
+
             String chairmanCode = "Jegerformand";
             // der skal bruges et while loop et sted her
 
             if (!chairmanCodeInput.equals(chairmanCode)) {
                 System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
-            } else {
+           } else {
                 System.out.println("مرحبا بك, Chairman");
+                System.out.println("\n1 - Register member");
+                System.out.println("2 - Review all members");
+                System.out.println("3 - Review active members");
+                System.out.println("4 - Review passive members");
+                System.out.println("5 - Remove member");
+                System.out.println("0 - exit");
+                return;
             }
 
-            System.out.println("\n1 - Register member");
-            System.out.println("2 - Review all members");
-            System.out.println("3 - Review active members");
-            System.out.println("4 - Review passive members");
-            System.out.println("5 - Remove member");
-            System.out.println("0 - exit");
+
+
 
             // IKKE SLET, VI SKAL BRUGE DET OM LIDT
 //            int chairmanMenuInput = scan.nextInt();
