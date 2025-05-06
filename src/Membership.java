@@ -19,8 +19,7 @@ public class Membership extends Member {
     }
 
     public String toString(){
-        return "membership: " + membership +
-                "Price: " + membershipPrice;
+        return "membership: " + membership + "Price: " + membershipPrice;
     }
 
 }
