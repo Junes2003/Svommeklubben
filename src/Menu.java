@@ -36,16 +36,38 @@ public class Menu {
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Please enter password:");
-        String chairmanCodeInput = scan.nextLine();
+        while (true) {
+            System.out.println("Please enter password:");
+            String chairmanCodeInput = scan.nextLine();
 
-        String chairmanCode = "Jegerformand";
-        // der skal bruges et while loop et sted her
+            String chairmanCode = "Jegerformand";
+            // der skal bruges et while loop et sted her
 
-        if (!chairmanCodeInput.equals(chairmanCode)) {
-            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
+            if (!chairmanCodeInput.equals(chairmanCode)) {
+                System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
+            } else {
+                System.out.println("مرحبا بك, Chairman");
+            }
+
+            System.out.println("\n1 - Register member");
+            System.out.println("2 - Review all members");
+            System.out.println("3 - Review active members");
+            System.out.println("4 - Review passive members");
+            System.out.println("5 - Remove member");
+            System.out.println("0 - exit");
+
+            // IKKE SLET, VI SKAL BRUGE DET OM LIDT
+//            int chairmanMenuInput = scan.nextInt();
+//            switch (chairmanMenuInput) {
+//                case 1 -> registerMember();
+//                case 2 -> reviewAllMembers();
+//                case 3 -> reviewActiveMembers();
+//                case 4 -> reviewPassiveMembers();
+//                case 5 -> removeMember();
+//                case 0 -> {} // dirigerer brugeren tilbage
+//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+//            }
         }
-
     }
 
     public void accountantMenu() {
@@ -58,6 +80,8 @@ public class Menu {
         // der skal bruges et while loop et sted her
         if (!accountantCodeInput.equals(accountantCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
+        } else {
+            System.out.println("مرحبا بك, Accountant");
         }
 
     }
@@ -73,7 +97,7 @@ public class Menu {
         if (!coachCodeInput.equals(coachCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
-            System.out.println("صباح الخير, Træner");
+            System.out.println("مرحبا بك, Coach");
         }
 
     }
