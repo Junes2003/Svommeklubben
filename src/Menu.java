@@ -42,7 +42,7 @@ public class Menu {
             System.out.println("Please enter password:");
             String chairmanCodeInput = scan.nextLine();
 
-            String chairmanCode = "Jegerformand";
+            String chairmanCode = "1";
             // der skal bruges et while loop et sted her
 
             if (!chairmanCodeInput.equals(chairmanCode)) {
@@ -82,7 +82,7 @@ public class Menu {
         System.out.println("Please enter code: ");
         String accountantCodeInput = scan.nextLine();
 
-        String accountantCode = "Jegerkasserer";
+        String accountantCode = "2";
         // der skal bruges et while loop et sted her
         if (!accountantCodeInput.equals(accountantCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
@@ -112,7 +112,7 @@ public class Menu {
         System.out.println("Please enter code: ");
         String coachCodeInput = scan.nextLine();
 
-        String coachCode = "Jegertræner";
+        String coachCode = "3";
         // der skal bruges et while loop et sted her
         if (!coachCodeInput.equals(coachCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
