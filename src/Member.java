@@ -9,9 +9,9 @@ public class Member {
    private String swimmerType;
    private int ageGroup;
    private int teamId;
+   private int parentsNumber;
 
     public Member (String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamId, LocalDateTime dateOfBirth){
-        this.name=name;
         this.ageGroup=ageGroup;
         this.dateOfBirth=dateOfBirth;
         this.memberID=memberID;
@@ -19,6 +19,7 @@ public class Member {
         this.name=name;
         this.memberType=memberType;
         this.teamId=teamId;
+        this.parentsNumber=parentsNumber;
 
     }
 
@@ -45,6 +46,10 @@ public class Member {
 
     public LocalDateTime getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public int getParentsNumber() {
+        return parentsNumber;
     }
 
     @Override
