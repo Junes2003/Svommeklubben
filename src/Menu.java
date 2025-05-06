@@ -58,19 +58,23 @@ public class Menu {
 
             }
 
+
+
             // IKKE SLET, VI SKAL BRUGE DET OM LIDT
-//            int chairmanMenuInput = scan.nextInt();
-//            switch (chairmanMenuInput) {
-//                case 1 -> registerMember();
-//                case 2 -> reviewAllMembers();
-//                case 3 -> reviewActiveMembers();
-//                case 4 -> reviewPassiveMembers();
-//                case 5 -> removeMember();
-//                case 0 -> {} // dirigerer brugeren tilbage
-//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
-//            }
+            int chairmanMenuInput = scan.nextInt();
+            switch (chairmanMenuInput) {
+               case 1 -> registerMember();
+               case 2 -> reviewAllMembers();
+               case 3 -> reviewActiveMembers();
+               case 4 -> reviewPassiveMembers();
+                case 5 -> removeMember();
+                case 0 -> {}
+                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+            }
         }
     }
+
+
 
     public void accountantMenu() {
         Scanner scan = new Scanner(System.in);
