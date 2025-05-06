@@ -56,12 +56,8 @@ public class Menu {
                 System.out.println("3 - Review active members");
                 System.out.println("4 - Review passive members");
                 System.out.println("5 - Remove member");
-                System.out.println("0 - exit");
-                return;
+                System.out.println("0 - Exit");
             }
-
-
-
 
             // IKKE SLET, VI SKAL BRUGE DET OM LIDT
 //            int chairmanMenuInput = scan.nextInt();
@@ -88,7 +84,12 @@ public class Menu {
         if (!accountantCodeInput.equals(accountantCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
-            System.out.println("مرحبا بك, Accountant");
+           System.out.println("مرحبا بك, Accountant");
+           System.out.println("\n1 - Register membership");
+           System.out.println("2 - See membership fee");
+           System.out.println("3 - See expected paid membership");
+           System.out.println("4 - See members in arrears");
+           System.out.println("0 - Exit");
         }
 
     }
@@ -105,6 +106,11 @@ public class Menu {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
             System.out.println("مرحبا بك, Coach");
+            System.out.println("1 - Stats");
+            System.out.println("2 - See team");
+            System.out.println("0 - Exit");
+
+
         }
 
     }
