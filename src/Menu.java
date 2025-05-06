@@ -30,6 +30,8 @@ public class Menu {
             case 1 -> chairmanMenu();
             case 2 -> accountantMenu();
             case 3 -> coachMenu();
+            default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input, try again" + InputHelper.RESET);
+
         }
     }
 
