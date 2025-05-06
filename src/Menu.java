@@ -42,8 +42,6 @@ public class Menu {
             System.out.println("Please enter password:");
             String chairmanCodeInput = scan.nextLine();
 
-
-
             String chairmanCode = "Jegerformand";
             // der skal bruges et while loop et sted her
 
@@ -52,11 +50,12 @@ public class Menu {
            } else {
                 System.out.println("مرحبا بك, Chairman");
                 System.out.println("\n1 - Register member");
-                System.out.println("2 - Review all members");
-                System.out.println("3 - Review active members");
-                System.out.println("4 - Review passive members");
+                System.out.println("2 - View all members");
+                System.out.println("3 - View active members");
+                System.out.println("4 - View passive members");
                 System.out.println("5 - Remove member");
                 System.out.println("0 - Exit");
+
             }
 
             // IKKE SLET, VI SKAL BRUGE DET OM LIDT
@@ -86,12 +85,21 @@ public class Menu {
         } else {
            System.out.println("مرحبا بك, Accountant");
            System.out.println("\n1 - Register membership");
-           System.out.println("2 - See membership fee");
-           System.out.println("3 - See expected paid membership");
-           System.out.println("4 - See members in arrears");
+           System.out.println("2 - View membership fee");
+           System.out.println("3 - View expected paid membership");
+           System.out.println("4 - View members in arrears");
            System.out.println("0 - Exit");
-        }
 
+            int chairmanMenuInput = scan.nextInt();
+            switch (chairmanMenuInput) {
+//                case 1 -> registerMembership();
+//                case 2 -> viewMembershipFee();
+//                case 3 -> viewExpectedPaidMembership();
+//                case 4 -> viewMembersInOutstandingPayment();
+//                case 0 -> {}
+//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+            }
+        }
     }
 
     public void coachMenu() {
@@ -106,12 +114,16 @@ public class Menu {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
             System.out.println("مرحبا بك, Coach");
-            System.out.println("\n1 - Stats");
-            System.out.println("2 - See team");
+            System.out.println("\n1 - View Stats");
+            System.out.println("2 - View Teams");
             System.out.println("0 - Exit");
 
-
+//            case 1 -> ViewStats();
+//            case 2 -> viewTeams();
+//            case 0 -> {}
+//            default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
         }
+
 
     }
 
