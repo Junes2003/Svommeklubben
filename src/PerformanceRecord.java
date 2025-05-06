@@ -14,31 +14,30 @@ public class PerformanceRecord {
         this.trainingBestTime = trainingBestTime;
     }
 
-public String getTrainingBestTime(){
-    return trainingBestTime;
-}
+    public String getTrainingBestTime(){
+        return trainingBestTime;
+    }
 
-public int getMemberID(){
-    return memberID;
-}
+    public int getMemberID(){
+        return memberID;
+    }
 
-public int getRecordID(){
-    return recordID;
-}
+    public int getRecordID(){
+        return recordID;
+    }
 
-public int getDiciplineID(){
-    return disciplineID;
+    public int getDisciplineID(){
+        return disciplineID;
+    }
 
-}
+    public String getTrainingBestDate(){
+        return trainingBestDate;
+    }
 
-public String getTrainingBestDate(){
-    return trainingBestDate;
-}
-@Override
-public String toString() {
-    return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + disciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
-}
-
+    @Override
+    public String toString() {
+        return "PerformanceRecord{" + "memberID=" + memberID + ", recordID=" + recordID + ", diciplineID=" + disciplineID + ", trainingBestDate=" + trainingBestDate + ", trainingBestTime='" + trainingBestTime + '\'' + '}';
+    }
 }
 
 
