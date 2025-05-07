@@ -12,7 +12,7 @@ public class Member {
     private int parentsNumber;
     private String parentsName;
 
-    public Member(String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamId, LocalDateTime dateOfBirth, int parentsNumber, String parentsName) {
+    public Member(String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamID, LocalDateTime dateOfBirth, int parentsNumber, String parentsName) {
         this.ageGroup = ageGroup;
         this.dateOfBirth = LocalDateTime.parse(String.valueOf(dateOfBirth));
         this.memberID = memberID;

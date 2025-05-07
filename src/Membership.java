@@ -11,6 +11,7 @@ public class Membership extends Member {
         this.membershipPrice = membershipPrice;
     }
 
+
     public String getMembership(){
         return membership;
     }
