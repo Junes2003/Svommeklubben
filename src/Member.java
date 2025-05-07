@@ -9,21 +9,21 @@ public class Member {
     private String swimmerType;
     private int ageGroup;
     private int teamID;
-    private int parentsNumber;
+    private String parentsNumber;
     private String parentsName;
 
-    public Member(String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamID, LocalDateTime dateOfBirth, int parentsNumber, String parentsName) {
-        this.ageGroup = ageGroup;
-        this.dateOfBirth = LocalDateTime.parse(String.valueOf(dateOfBirth));
+    public Member(int memberID, String name, String birthDate, String memberType, String swimmerType,
+                  int ageGroup, String parentsNumber, String parentsName) {
         this.memberID = memberID;
-        this.swimmerType = String.valueOf(swimmerType);
-        this.name = String.valueOf(name);
+        this.name = name;
         this.memberType = memberType;
-        this.teamID = teamID;
+        this.swimmerType = swimmerType;
+        this.ageGroup = ageGroup;
         this.parentsNumber = parentsNumber;
         this.parentsName = parentsName;
-
+        this.dateOfBirth = LocalDateTime.parse(birthDate);
     }
+
 
     public String getName() {
         return name;
@@ -49,7 +49,7 @@ public class Member {
         return dateOfBirth;
     }
 
-    public int getParentsNumber() {
+    public String getParentsNumber() {
         return parentsNumber;
     }
 
@@ -57,19 +57,24 @@ public class Member {
         return parentsName;
     }
 
+
+    public String getSwimmerType() {
+        return swimmerType;
+    }
     @Override
     public String toString() {
         return "Member{" +
-                "ID=" + memberID +
-                ", Name='" + name + '\'' +
-                ", DOB=" + dateOfBirth +
-                ", Type='" + memberType + '\'' +
-                ", SwimmerType='" + swimmerType + '\'' +
-                ", AgeGroup=" + ageGroup +
-                ", TeamId=" + teamID +
-                ", ParentsNumber=" + parentsNumber +
-                ", ParentsName='" + parentsName + '\'' +
+                "memberID=" + memberID +
+                ", name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", memberType='" + memberType + '\'' +
+                ", swimmerType='" + swimmerType + '\'' +
+                ", ageGroup=" + ageGroup +
+                ", teamID=" + teamID +
+                ", parentsNumber=" + parentsNumber +
+                ", parentsName='" + parentsName + '\'' +
                 '}';
     }
+
 }
 

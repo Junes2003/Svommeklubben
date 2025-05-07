@@ -19,12 +19,12 @@ public class MemberController {
         String allFile = "src/MemberInfo.csv";
         String activeFile = "src/ActiveMembers.csv";
         String passiveFile = "src/PassiveMembers.csv";
-        String competitiveSwimmers = "src/competitiveSwimmers.csv";
+        String competitiveFile = "src/competitiveSwimmers.csv";
 
         allMembers = MemberCSVLoader.loadMembersFromCSV(allFile);
         activeMembers = MemberCSVLoader.loadMembersFromCSV(activeFile);
         passiveMembers = MemberCSVLoader.loadMembersFromCSV(passiveFile);
-        competitiveSwimmers = MemberCSVLoader.loadMembersFromCSV(competitiveSwimmers);
+        competitiveSwimmers = MemberCSVLoader.loadMembersFromCSV(competitiveFile);
 
         System.out.println("All members loaded: " + allMembers.size());
         System.out.println("Active members loaded: " + activeMembers.size());
@@ -44,7 +44,7 @@ public class MemberController {
         return passiveMembers;
     }
 
-    public list<Member> getcompetitiveSwimmers(){
+    public List<Member> getcompetitiveSwimmers(){
         return competitiveSwimmers;
     }
 }
