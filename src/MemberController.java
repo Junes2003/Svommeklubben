@@ -3,7 +3,6 @@ import java.util.List;
 
 public class MemberController {
 
-
     private List<Member> allMembers;
     private List<Member> activeMembers;
     private List<Member> passiveMembers;
@@ -14,8 +13,9 @@ public class MemberController {
         passiveMembers = new ArrayList<>();
 
     }
-    String allfile = "src/Memberinfo.CSV";
-    String activeFile = "src/ActiveMembers.CSV";
-    String passiveFile = "src/Passive.CSV";
+
+    String allFiles = "src/Memberinfo.CSV";
+    String activeFiles = "src/ActiveMembers.CSV";
+    String passiveFiles = "src/Passive.CSV";
 
 }
