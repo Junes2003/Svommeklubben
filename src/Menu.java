@@ -47,7 +47,7 @@ public class Menu {
 
             if (!chairmanCodeInput.equals(chairmanCode)) {
                 System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
-            }
+            } else {
                 System.out.println("مرحبا بك, Chairman");
                 System.out.println("\n1 - Register member");
                 System.out.println("2 - View all members");
@@ -55,24 +55,19 @@ public class Menu {
                 System.out.println("4 - View passive members");
                 System.out.println("5 - Remove member");
                 System.out.println("0 - Exit");
+                break;
+            }
 
-                while (true) {
-                    int chairmanMenuInput = scan.nextInt();
-                    switch (chairmanMenuInput) {
-//                case 1 -> registerMember();
-//                case 2 -> reviewAllMembers();
-//                case 3 -> reviewActiveMembers();
-//                case 4 -> reviewPassiveMembers();
-//                case 5 -> removeMember();
-                        case 0 -> {
-                            System.out.println("exiting menu...");
-                            {} // dirigerer brugeren tilbage
-
-                        }
-
-                        default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
-                    }
-                }
+//                while (true) {
+//                    int chairmanMenuInput = scan.nextInt();
+//                    switch (chairmanMenuInput) {
+////                    case 1 -> registerMember();
+////                    case 2 -> reviewAllMembers();
+////                    case 3 -> reviewActiveMembers();
+////                    case 4 -> reviewPassiveMembers();
+////                    case 5 -> removeMember();
+//                        case 0 -> {} // dirigerer brugeren tilbage
+//                        default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
         }
     }
 
@@ -87,22 +82,22 @@ public class Menu {
         if (!accountantCodeInput.equals(accountantCode)) {
             System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
         } else {
-            System.out.println("مرحبا بك, Accountant");
-            System.out.println("\n1 - Register membership");
+            System.out.println("\nمرحبا بك, Accountant");
+            System.out.println("1 - Register membership");
             System.out.println("2 - View membership fee");
             System.out.println("3 - View expected paid membership");
-            System.out.println("4 - View members in arrears");
+            System.out.println("4 - View members with outstanding payment");
             System.out.println("0 - Exit");
 
-            int chairmanMenuInput = scan.nextInt();
-            switch (chairmanMenuInput) {
+//            int chairmanMenuInput = scan.nextInt();
+//            switch (chairmanMenuInput) {
 //                case 1 -> registerMembership();
 //                case 2 -> viewMembershipFee();
 //                case 3 -> viewExpectedPaidMembership();
-//                case 4 -> viewMembersInOutstandingPayment();
-//                case 0 -> {}
-//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
-            }
+//             case 4 -> viewMembersWithOutstandingPayment();
+//              case 0 -> {}
+//               default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+//            }
         }
     }
 
