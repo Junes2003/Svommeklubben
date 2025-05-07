@@ -4,27 +4,26 @@ public class Member {
 
     private int memberID;
     private String name;
-    private int dateOfBirth;
+    private LocalDateTime dateOfBirth;
     private String memberType;
     private String swimmerType;
     private int ageGroup;
-    private int teamId;
+    private int teamID;
     private int parentsNumber;
     private String parentsName;
 
-    public Member(int name, String memberType, LocalDateTime swimmerType, String memberID, String ageGroup, int teamId, int dateOfBirth, int parentsNumber, String parentsName) {
-        this.ageGroup = Integer.parseInt(ageGroup);
-        this.dateOfBirth = dateOfBirth;
-        this.memberID = Integer.parseInt(memberID);
+    public Member(String name, String memberType, String swimmerType, int memberID, int ageGroup, int teamId, LocalDateTime dateOfBirth, int parentsNumber, String parentsName) {
+        this.ageGroup = ageGroup;
+        this.dateOfBirth = LocalDateTime.parse(String.valueOf(dateOfBirth));
+        this.memberID = memberID;
         this.swimmerType = String.valueOf(swimmerType);
         this.name = String.valueOf(name);
         this.memberType = memberType;
-        this.teamId = teamId;
+        this.teamID = teamID;
         this.parentsNumber = parentsNumber;
         this.parentsName = parentsName;
 
     }
-
 
     public String getName() {
         return name;
@@ -42,11 +41,11 @@ public class Member {
         return ageGroup;
     }
 
-    public int getTeamId() {
-        return teamId;
+    public int getTeamID() {
+        return teamID;
     }
 
-    public int getDateOfBirth() {
+    public LocalDateTime getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -67,7 +66,7 @@ public class Member {
                 ", Type='" + memberType + '\'' +
                 ", SwimmerType='" + swimmerType + '\'' +
                 ", AgeGroup=" + ageGroup +
-                ", TeamId=" + teamId +
+                ", TeamId=" + teamID +
                 ", ParentsNumber=" + parentsNumber +
                 ", ParentsName='" + parentsName + '\'' +
                 '}';

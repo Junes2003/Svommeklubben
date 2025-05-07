@@ -9,7 +9,7 @@ public class Menu {
     private List<PerformanceRecord> performanceRecords;
     private List<Membership> memberships;
 
-    public Menu (){
+    public Menu() {
         clubMembers = new ArrayList<>();
         teams = new ArrayList<>();
         performanceRecords = new ArrayList<>();
@@ -32,14 +32,13 @@ public class Menu {
             case 2 -> accountantMenu();
             case 3 -> coachMenu();
             default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input, try again" + InputHelper.RESET);
-
         }
     }
 
     public void chairmanMenu() {
         Scanner scan = new Scanner(System.in);
 
-        if (true) {
+        while (true) {
             System.out.println("Please enter password:");
             String chairmanCodeInput = scan.nextLine();
 
@@ -48,7 +47,7 @@ public class Menu {
 
             if (!chairmanCodeInput.equals(chairmanCode)) {
                 System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again" + InputHelper.RESET);
-           } else {
+            } else {
                 System.out.println("مرحبا بك, Chairman");
                 System.out.println("\n1 - Register member");
                 System.out.println("2 - View all members");
@@ -57,9 +56,19 @@ public class Menu {
                 System.out.println("5 - Remove member");
                 System.out.println("0 - Exit");
 
+                int chairmanMenuInput = scan.nextInt();
+                switch (chairmanMenuInput) {
+                    case 1 -> registerMember();
+                    case 2 -> reviewAllMembers();
+                    case 3 -> reviewActiveMembers();
+                    case 4 -> reviewPassiveMembers();
+                    case 5 -> removeMember();
+                    case 0 -> {}
+                    default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+                }
             }
             // Kun en prøve
-//            File file = new File("ActiveMebmerCSV");
+//            File file = new File("ActiveMemberCSV");
 //            try {
 //                scanner reader = Scanner(File):
 //                while (reader.hasNextLine);
@@ -71,81 +80,64 @@ public class Menu {
 //            System.out.println("Error while reading file");
 //        }
 
-
-
-//             IKKE SLET, VI SKAL BRUGE DET OM LIDT
-//            int chairmanMenuInput = scan.nextInt();
-//            switch (chairmanMenuInput) {
-//               case 1 -> registerMember();
-//               case 2 -> reviewAllMembers();
-//               case 3 -> reviewActiveMembers();
-//               case 4 -> reviewPassiveMembers();
-//                case 5 -> removeMember();
-//                case 0 -> {}
-//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
-//            }
-//        }
-//    }
-
-
-
-    public void accountantMenu() {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Please enter code: ");
-        String accountantCodeInput = scan.nextLine();
-
-        String accountantCode = "2";
-        // der skal bruges et while loop et sted her
-        if (!accountantCodeInput.equals(accountantCode)) {
-            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
-        } else {
-           System.out.println("مرحبا بك, Accountant");
-           System.out.println("\n1 - Register membership");
-           System.out.println("2 - View membership fee");
-           System.out.println("3 - View expected paid membership");
-           System.out.println("4 - View members in arrears");
-           System.out.println("0 - Exit");
-
-            int chairmanMenuInput = scan.nextInt();
-            switch (chairmanMenuInput) {
-//                case 1 -> registerMembership();
-//                case 2 -> viewMembershipFee();
-//                case 3 -> viewExpectedPaidMembership();
-//                case 4 -> viewMembersInOutstandingPayment();
-//                case 0 -> {}
-//                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
             }
         }
-    }
 
-    public void coachMenu() {
-        Scanner scan = new Scanner(System.in);
+            public void accountantMenu() {
+                Scanner scan = new Scanner(System.in);
 
-        System.out.println("Please enter code: ");
-        String coachCodeInput = scan.nextLine();
+                System.out.println("Please enter code: ");
+                String accountantCodeInput = scan.nextLine();
 
-        String coachCode = "3";
-        // der skal bruges et while loop et sted her
-        if (!coachCodeInput.equals(coachCode)) {
-            System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
-        } else {
-            System.out.println("مرحبا بك, Coach");
-            System.out.println("\n1 - View Stats");
-            System.out.println("2 - View Teams");
-            System.out.println("0 - Exit");
+                String accountantCode = "2";
+                // der skal bruges et while loop et sted her
+                if (!accountantCodeInput.equals(accountantCode)) {
+                    System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
+                } else {
+                    System.out.println("مرحبا بك, Accountant");
+                    System.out.println("\n1 - Register membership");
+                    System.out.println("2 - View membership fee");
+                    System.out.println("3 - View expected paid membership");
+                    System.out.println("4 - View members in arrears");
+                    System.out.println("0 - Exit");
 
-//            case 1 -> ViewStats();
-//            case 2 -> viewTeams();
-//            case 0 -> {}
-//            default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+//            int chairmanMenuInput = scan.nextInt();
+//            switch (chairmanMenuInput) {
+////                case 1 -> registerMembership();
+////                case 2 -> viewMembershipFee();
+////                case 3 -> viewExpectedPaidMembership();
+////                case 4 -> viewMembersInOutstandingPayment();
+////                case 0 -> {}
+////                default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+            }
+                }
+
+            public void coachMenu () {
+                Scanner scan = new Scanner(System.in);
+
+                System.out.println("Please enter code: ");
+                String coachCodeInput = scan.nextLine();
+
+                String coachCode = "3";
+                // der skal bruges et while loop et sted her
+                if (!coachCodeInput.equals(coachCode)) {
+                    System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid code, try again!" + InputHelper.RESET);
+                } else {
+                    System.out.println("مرحبا بك, Coach");
+                    System.out.println("\n1 - View Stats");
+                    System.out.println("2 - View Teams");
+                    System.out.println("0 - Exit");
+
+    //            case 1 -> ViewStats();
+    //            case 2 -> viewTeams();
+    //            case 0 -> {}
+    //            default -> System.out.println(InputHelper.RED + InputHelper.BOLD + "Invalid input! Try again" + InputHelper.BOLD + InputHelper.RESET); // Fejlmeddelelse for ugyldigt input
+                }
+
+
+            }
+
+            public List<Member> getMembers () {
+                return clubMembers;
+            }
         }
-
-
-    }
-
-    public List<Member> getMembers() {
-        return clubMembers;
-    }
-
-}
