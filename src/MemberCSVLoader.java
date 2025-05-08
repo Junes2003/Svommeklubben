@@ -1,31 +1,28 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MemberCSVLoader {
 
-    public static List<Member> loadMembersFromCSV(String filePath) {
+    public static List<Member> loadMembersFromCSV(String fileName) {
         List<Member> members = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try (InputStream is = MemberCSVLoader.class.getClassLoader().getResourceAsStream(fileName);
+             BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
+
             String line;
-            int lineCount = 0;  // Til debugging, tæller linjer, der bliver læst
+            int lineCount = 0;
 
             while ((line = br.readLine()) != null) {
-                lineCount++;  // Tæller linjer
-                // Skippe kommentarer (valgfrit) eller tomme linjer
-                if (line.trim().isEmpty()) {
-                    continue;
-                }
+                lineCount++;
+                if (line.trim().isEmpty()) continue;
 
                 String[] values = line.split(",");
                 if (values.length >= 9) {
                     try {
                         int memberID = Integer.parseInt(values[0].trim());
                         String name = values[1].trim();
-                        String dateOfBirth = values[2].trim();  // Vi kan beholde denne som String
+                        String dateOfBirth = values[2].trim();
                         String memberType = values[3].trim();
                         String swimmerType = values[4].trim();
                         int ageGroup = Integer.parseInt(values[5].trim());
@@ -33,10 +30,7 @@ public class MemberCSVLoader {
                         String parentsNumber = values[7].trim();
                         String parentName = values[8].trim();
 
-                        // Hvis telefonnummeret er "0", sæt det som tomt
-                        if (parentsNumber.equals("0")) {
-                            parentsNumber = "";
-                        }
+                        if (parentsNumber.equals("0")) parentsNumber = "";
 
                         Member member = new Member(memberID, name, dateOfBirth, memberType, swimmerType,
                                 ageGroup, parentsNumber, parentName);
@@ -54,8 +48,8 @@ public class MemberCSVLoader {
                 System.out.println("CSV filen er tom!");
             }
 
-        } catch (IOException e) {
-            System.err.println("Fejl ved indlæsning af fil: " + filePath);
+        } catch (IOException | NullPointerException e) {
+            System.err.println("Fejl ved indlæsning af fil: " + fileName);
             e.printStackTrace();
         }
 

@@ -9,11 +9,14 @@ public class Menu {
     private List<Membership> memberships;
 
     public Menu() {
-        clubMembers = MemberCSVLoader.loadMembersFromCSV("memberInfoCsv.csv");
+        // Ret stien så den peger på src/MemberInfo.csv
+        clubMembers = MemberCSVLoader.loadMembersFromCSV("src/MemberInfo.csv");
         teams = new ArrayList<>();
         performanceRecords = new ArrayList<>();
         memberships = new ArrayList<>();
     }
+    
+
 
     public void initializeMenu() {
         Scanner scan = new Scanner(System.in);
