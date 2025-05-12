@@ -20,12 +20,16 @@ public class Menu {
         while (true) {
             System.out.println("Choose an option:");
             System.out.println("1 - Chairman");
+            System.out.println("2 - Accountant");
+            System.out.println("3 - Coach");
             System.out.println("0 - Exit");
 
-            int input = InputHelper.getIntBoundedInput("Choice: ", 0, 1); // Input mellem 0 og 1
+            int input = InputHelper.getIntBoundedInput("Choice: ", 0, 4); // Input mellem 0 og 1
 
             switch (input) {
                 case 1 -> chairmanMenu();  // Kalder chairmanMenu()
+                case 2 -> accountantMenu();
+                case 3 -> coachMenu();
                 case 0 -> System.exit(0);  // Afslutter programmet
                 default -> System.out.println("Invalid input! Try again.");
             }
@@ -88,19 +92,19 @@ public class Menu {
 
         if (registerMemberInput.equalsIgnoreCase("yes")) {
             Member member = new Member();
-            Integer memberIDInput = InputHelper.getIntInput("Enter member ID: ");
+            int memberIDInput = InputHelper.getIntInput("Enter member ID: ");
             String nameInput = InputHelper.getStringInput("Enter name: ");
             String dateOfBirthInput = InputHelper.getStringInput("Enter date of birth (yyyy,MM,dd): ");
-            Integer memberTypeInput = InputHelper.getIntInput("Enter member type (1 for Active, 2 for Passive): ");
-            Integer swimmerTypeInput = InputHelper.getIntInput("Enter swimmer type: ");
-            Integer teamIDInput = InputHelper.getIntInput("Enter team ID: ");
-            Integer ageInput = InputHelper.getIntInput("Enter age: ");
+            int memberTypeInput = InputHelper.getIntInput("Enter member type (1 for Active, 2 for Passive): ");
+            int swimmerTypeInput = InputHelper.getIntInput("Enter swimmer type: ");
+            int teamIDInput = InputHelper.getIntInput("Enter team ID: ");
+            int ageInput = InputHelper.getIntInput("Enter age: ");
 
             // Hvis medlemmet er under 18 år, skal der også indtastes forældres oplysninger
             if (ageInput < 18) {
-                Integer parentNumberInput = InputHelper.getIntInput("Enter parent's number: ");
+                String parentNumberInput = InputHelper.getStringInput("Enter parent's number: ");
                 String parentNameInput = InputHelper.getStringInput("Enter parent's name: ");
-                member.setParentsNumber(parentNumberInput.toString());
+                member.setParentsNumber(parentNumberInput);
                 member.setParentsName(parentNameInput);
             }
 
@@ -108,7 +112,7 @@ public class Menu {
             member.setName(nameInput);
             member.setDateOfBirth(LocalDate.parse(dateOfBirthInput));
             member.setMemberType(memberTypeInput == 1 ? "Active" : "Passive");
-            member.setSwimmerType(swimmerTypeInput.toString());
+            member.setSwimmerType(String.valueOf(swimmerTypeInput));
             member.setTeamID(teamIDInput);
             member.setAge(ageInput);
 

@@ -34,6 +34,7 @@ public class FileReader {
                 int teamID = Integer.parseInt(line[6]);
                 String parentsNumber = line[7];
                 String parentsName = line[8];
+
                 members.add(new Member());
             }
         } catch (FileNotFoundException e) {
