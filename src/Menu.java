@@ -84,7 +84,9 @@ public class Menu {
                 Integer parentNumberInput = InputHelper.getIntInput("Enter parent's number: ");
                 Integer parentNameInput = InputHelper.getIntInput("Enter parent's name: ");
             }
-        } else {}
+        } else {
+
+        }
     }
 
     public void viewAllMembers() {
