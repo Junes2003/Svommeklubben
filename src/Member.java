@@ -1,10 +1,11 @@
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Member {
 
     private int memberID;
     private String name;
-    private LocalDateTime dateOfBirth;
+    private LocalDate dateOfBirth;
     private String memberType;
     private String swimmerType;
     private int ageGroup;
@@ -12,8 +13,8 @@ public class Member {
     private String parentsNumber;
     private String parentsName;
 
-    public Member(int memberID, String name, String birthDate, String memberType, String swimmerType,
-                  int ageGroup, String parentsNumber, String parentsName) {
+    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType,
+                  int ageGroup, String parentsNumber, String parentsName , int teamID) {
         this.memberID = memberID;
         this.name = name;
         this.memberType = memberType;
@@ -21,7 +22,8 @@ public class Member {
         this.ageGroup = ageGroup;
         this.parentsNumber = parentsNumber;
         this.parentsName = parentsName;
-        this.dateOfBirth = LocalDateTime.parse(birthDate);
+        this.dateOfBirth = dateOfBirth;
+        this.teamID = teamID;
     }
 
 
@@ -45,7 +47,7 @@ public class Member {
         return teamID;
     }
 
-    public LocalDateTime getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -61,20 +63,29 @@ public class Member {
     public String getSwimmerType() {
         return swimmerType;
     }
-    @Override
-    public String toString() {
-        return "Member{" +
-                "memberID=" + memberID +
-                ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", memberType='" + memberType + '\'' +
-                ", swimmerType='" + swimmerType + '\'' +
-                ", ageGroup=" + ageGroup +
-                ", teamID=" + teamID +
-                ", parentsNumber=" + parentsNumber +
-                ", parentsName='" + parentsName + '\'' +
-                '}';
+
+    public int getteamID() {
+        return teamID;
     }
 
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Member {\n" +
+                        "  memberID     = %d\n" +
+                        "  name         = '%s'\n" +
+                        "  dateOfBirth  = %s\n" +
+                        "  memberType   = '%s'\n" +
+                        "  swimmerType  = '%s'\n" +
+                        "  ageGroup     = %s\n" +
+                        "  teamID       = %s\n" +
+                        "  parentsNumber= %s\n" +
+                        "  parentsName  = '%s'\n" +
+                        "}",
+                memberID, name, dateOfBirth, memberType, swimmerType,
+                ageGroup, teamID, parentsNumber, parentsName
+        );
+    }
 }
 

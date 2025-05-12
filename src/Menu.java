@@ -10,12 +10,12 @@ public class Menu {
 
     public Menu() {
         // Ret stien så den peger på src/MemberInfo.csv
-        clubMembers = MemberCSVLoader.loadMembersFromCSV("src/MemberInfo.csv");
+//        clubMembers = MemberCSVLoader.loadMembersFromCSV("src/MemberInfo.csv");
         teams = new ArrayList<>();
         performanceRecords = new ArrayList<>();
         memberships = new ArrayList<>();
     }
-    
+
 
 
     public void initializeMenu() {
