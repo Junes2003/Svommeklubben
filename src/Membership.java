@@ -1,15 +1,14 @@
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import java.time.LocalDateTime;
 
 public class Membership extends Member {
     private String membership;
-    private double membershipPrice;
+    private int membershipPrice;
 
-    public Membership(int memberID, String name, LocalDateTime birthDate, String memberType, String swimmerType,
-                      int ageGroup, String parentsNumber, String parentsName, String membership, double membershipPrice) {
-        super(memberID, name, String.valueOf(birthDate), memberType, swimmerType, ageGroup, parentsNumber, parentsName);
-
+    public Membership(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int age, int teamID, String parentsNumber, String parentsName, String membership, int membershipPrice) {
+        super(memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName);
         // Initialisering af medlems-relaterede felter
         this.membership = membership;
         this.membershipPrice = membershipPrice;
@@ -19,7 +18,7 @@ public class Membership extends Member {
         return membership;
     }
 
-    public double getMembershipPrice() {
+    public int getMembershipPrice() {
         return membershipPrice;
     }
 
