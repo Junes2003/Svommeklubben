@@ -13,7 +13,10 @@ public class InputHelper {
 
     // Henter et heltal fra brugeren
     public static int getIntInput(String prompt) {
-        System.out.println(prompt);
+        if (!prompt.isEmpty()) {
+            System.out.println(prompt);
+        }
+
         while (!scanner.hasNextInt()) {
             System.out.println(RED + BOLD + "Invalid input! Try again" + RESET);
             scanner.nextLine();
@@ -32,6 +35,7 @@ public class InputHelper {
         }
         return input;
     }
+
     // Henter en tekststreng fra brugeren
     public static String getStringInput(String prompt) {
         System.out.println(prompt);
