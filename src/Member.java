@@ -1,8 +1,4 @@
 import java.time.LocalDate;
-<<<<<<< HEAD
-import java.time.LocalDateTime;
-=======
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
 
 public class Member {
 
@@ -16,29 +12,19 @@ public class Member {
     private String parentsNumber;
     private String parentsName;
 
-<<<<<<< HEAD
-    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType,
-                  int ageGroup, String parentsNumber, String parentsName , int teamID) {
-=======
-    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int teamID, int age, String parentsNumber, String parentsName) {
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
-        this.memberID = memberID;
+    public Member(String name, String memberType, String swimmerType, int memberID, int age, int teamID, LocalDate dateOfBirth, String parentsNumber, String parentsName) {
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
         this.memberType = memberType;
         this.swimmerType = swimmerType;
+        this.memberID = memberID;
         this.age = age;
         this.teamID = teamID;
+        this.dateOfBirth = dateOfBirth;
         this.parentsNumber = parentsNumber;
         this.parentsName = parentsName;
-<<<<<<< HEAD
-        this.dateOfBirth = dateOfBirth;
-        this.teamID = teamID;
-=======
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
     }
 
-    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int teamID, int age) {
+    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int age, int teamID) {
         this.memberID = memberID;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -49,6 +35,42 @@ public class Member {
     }
 
     public Member() {}
+
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
+    }
+
+    public void setParentsName(String parentsName) {
+        this.parentsName = parentsName;
+    }
+
+    public void setParentsNumber(String parentsNumber) {
+        this.parentsNumber = parentsNumber;
+    }
+
+    public void setTeamID(int teamID) {
+        this.teamID = teamID;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSwimmerType(String swimmerType) {
+        this.swimmerType = swimmerType;
+    }
+
+    public void setMemberType(String memberType) {
+        this.memberType = memberType;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -86,28 +108,6 @@ public class Member {
         return swimmerType;
     }
 
-<<<<<<< HEAD
-    public int getteamID() {
-        return teamID;
-=======
-    @Override
-    public String toString() {
-        // TODO: lav tabel layout
-        return "Member" +
-                "memberID=" + memberID +
-                ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", memberType='" + memberType + '\'' +
-                ", swimmerType='" + swimmerType + '\'' +
-                ", ageGroup=" + age +
-                ", teamID=" + teamID +
-                ", parentsNumber=" + parentsNumber +
-                ", parentsName='" + parentsName + '\'' +
-                '}';
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
-    }
-
-
     @Override
     public String toString() {
         return String.format(
@@ -117,14 +117,11 @@ public class Member {
                         "  dateOfBirth  = %s\n" +
                         "  memberType   = '%s'\n" +
                         "  swimmerType  = '%s'\n" +
-                        "  ageGroup     = %s\n" +
-                        "  teamID       = %s\n" +
+                        "  age          = %d\n" +
+                        "  teamID       = %d\n" +
                         "  parentsNumber= %s\n" +
                         "  parentsName  = '%s'\n" +
-                        "}",
-                memberID, name, dateOfBirth, memberType, swimmerType,
-                ageGroup, teamID, parentsNumber, parentsName
+                        "}", memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName
         );
     }
 }
-

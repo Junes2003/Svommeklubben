@@ -14,23 +14,23 @@ public class PerformanceRecord {
         this.trainingBestTime = trainingBestTime;
     }
 
-    public String getTrainingBestTime(){
+    public String getTrainingBestTime() {
         return trainingBestTime;
     }
 
-    public int getMemberID(){
+    public int getMemberID() {
         return memberID;
     }
 
-    public int getRecordID(){
+    public int getRecordID() {
         return recordID;
     }
 
-    public int getDisciplineID(){
+    public int getDisciplineID() {
         return disciplineID;
     }
 
-    public String getTrainingBestDate(){
+    public String getTrainingBestDate() {
         return trainingBestDate;
     }
 

@@ -1,33 +1,30 @@
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import java.time.LocalDateTime;
 
 public class Membership extends Member {
     private String membership;
-    private int membershipPrice;
+    private double membershipPrice;
 
-    public Membership(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int age, int teamID, String parentsNumber, String parentsName, String membership, int membershipPrice) {
-        super(memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName);
-        // Initialisering af medlems-relaterede felter
+
+    public Membership(String name, String memberType, String swimmerType, int memberID, int age, int teamID, LocalDate dateOfBirth, String membership, double membershipPrice, String parentsNumber, String parentsName) {
+        super(name, memberType, swimmerType, memberID, age, teamID, dateOfBirth, parentsNumber, parentsName);
         this.membership = membership;
         this.membershipPrice = membershipPrice;
     }
 
-    public String getMembership() {
+    public String getMembership(){
         return membership;
     }
 
-    public int getMembershipPrice() {
+    public double getMembershipPrice(){
         return membershipPrice;
     }
 
-    // ToString metode til at udskrive Membership information
-    @Override
-    public String toString() {
-        return super.toString() + ", Membership{" +
-                "membership='" + membership + '\'' +
-                ", membershipPrice=" + membershipPrice +
-                '}';
+    public void membersWithOutstandingPayment() {
+
     }
+
+    public String toString(){
+        return "membership: " + membership + "Price: " + membershipPrice;
+    }
+
 }
