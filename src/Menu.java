@@ -10,20 +10,16 @@ public class Menu {
 
     public Menu() {
         // Ret stien så den peger på src/MemberInfo.csv
-<<<<<<< HEAD
+
 //        clubMembers = MemberCSVLoader.loadMembersFromCSV("src/MemberInfo.csv");
-=======
+
         clubMembers = MemberCSVLoader.loadMembersFromCSV("files/MemberInfo.csv");
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
         teams = new ArrayList<>();
         performanceRecords = new ArrayList<>();
         memberships = new ArrayList<>();
     }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 9a3c5a35a3564a396f66f14fa811e906bfc01ca6
 
     public void initializeMenu() {
         while (true) {
