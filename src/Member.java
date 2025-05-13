@@ -20,7 +20,8 @@ public class Member {
     public Member(String name, String memberType, String swimmerType, int memberID, int age, int teamID, LocalDate dateOfBirth, String parentsNumber, String parentsName) {
 =======
     public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType,
-                  int ageGroup, String parentsNumber, String parentsName , int teamID) {
+                  int ageGroup, String parentsNumber, String parentsName, int teamID) {
+    }
 
     public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int teamID, int age, String parentsNumber, String parentsName) {
         this.memberID = memberID;
@@ -52,7 +53,8 @@ public class Member {
         this.teamID = teamID;
     }
 
-    public Member() {}
+    public Member() {
+    }
 
     public void setMemberID(int memberID) {
         this.memberID = memberID;
@@ -131,25 +133,13 @@ public class Member {
 
     public int getteamID() {
         return teamID;
-
-    @Override
-    public String toString() {
-        // TODO: lav tabel layout
-        return "Member" +
-                "memberID=" + memberID +
-                ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", memberType='" + memberType + '\'' +
-                ", swimmerType='" + swimmerType + '\'' +
-                ", ageGroup=" + age +
-                ", teamID=" + teamID +
-                ", parentsNumber=" + parentsNumber +
-                ", parentsName='" + parentsName + '\'' +
-                '}';
     }
 
+<<<<<<< HEAD
 
 >>>>>>> cf1ea7f (Added change)
+=======
+>>>>>>> 45d6a20 (Gemmer lokale ændringer før rebase)
     @Override
     public String toString() {
         return String.format(
@@ -163,7 +153,13 @@ public class Member {
                         "  teamID       = %d\n" +
                         "  parentsNumber= %s\n" +
                         "  parentsName  = '%s'\n" +
+<<<<<<< HEAD
                         "}", memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName
+=======
+                        "}",
+                memberID, name, dateOfBirth, memberType, swimmerType,
+                age, teamID, parentsNumber, parentsName
+>>>>>>> 45d6a20 (Gemmer lokale ændringer før rebase)
         );
     }
 <<<<<<< HEAD
