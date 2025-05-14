@@ -1,4 +1,8 @@
 import java.time.LocalDate;
+<<<<<<< HEAD
+=======
+import java.time.LocalDateTime;
+>>>>>>> cf1ea7f (Added change)
 
 public class Member {
 
@@ -12,7 +16,16 @@ public class Member {
     private String parentsNumber;
     private String parentsName;
 
+<<<<<<< HEAD
     public Member(String name, String memberType, String swimmerType, int memberID, int age, int teamID, LocalDate dateOfBirth, String parentsNumber, String parentsName) {
+=======
+    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType,
+                  int ageGroup, String parentsNumber, String parentsName, int teamID) {
+    }
+
+    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int teamID, int age, String parentsNumber, String parentsName) {
+        this.memberID = memberID;
+>>>>>>> cf1ea7f (Added change)
         this.name = name;
         this.memberType = memberType;
         this.swimmerType = swimmerType;
@@ -22,6 +35,12 @@ public class Member {
         this.dateOfBirth = dateOfBirth;
         this.parentsNumber = parentsNumber;
         this.parentsName = parentsName;
+<<<<<<< HEAD
+=======
+
+        this.dateOfBirth = dateOfBirth;
+        this.teamID = teamID;
+>>>>>>> cf1ea7f (Added change)
     }
 
     public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int age, int teamID) {
@@ -34,7 +53,8 @@ public class Member {
         this.teamID = teamID;
     }
 
-    public Member() {}
+    public Member() {
+    }
 
     public void setMemberID(int memberID) {
         this.memberID = memberID;
@@ -108,6 +128,18 @@ public class Member {
         return swimmerType;
     }
 
+<<<<<<< HEAD
+=======
+
+    public int getteamID() {
+        return teamID;
+    }
+
+<<<<<<< HEAD
+
+>>>>>>> cf1ea7f (Added change)
+=======
+>>>>>>> 45d6a20 (Gemmer lokale ændringer før rebase)
     @Override
     public String toString() {
         return String.format(
@@ -121,7 +153,17 @@ public class Member {
                         "  teamID       = %d\n" +
                         "  parentsNumber= %s\n" +
                         "  parentsName  = '%s'\n" +
+<<<<<<< HEAD
                         "}", memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName
+=======
+                        "}",
+                memberID, name, dateOfBirth, memberType, swimmerType,
+                age, teamID, parentsNumber, parentsName
+>>>>>>> 45d6a20 (Gemmer lokale ændringer før rebase)
         );
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cf1ea7f (Added change)
