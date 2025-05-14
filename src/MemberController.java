@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cf1ea7f (Added change)
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +15,6 @@ public class gMemberController {
 
     public void loadAllMembers() {
         allMembers = MemberCSVLoader.loadMembersFromCSV("files/MemberInfo.csv");
-
-<<<<<<< HEAD
         for (Member member : allMembers) {
             if (member.getSwimmerType().equalsIgnoreCase("Active")) {
                 activeMembers.add(member);
@@ -28,7 +22,6 @@ public class gMemberController {
                 passiveMembers.add(member);
             }
         }
-=======
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -66,8 +59,8 @@ public class gMemberController {
         System.out.println("Active members loaded: " + activeMembers.size());
         System.out.println("Passive members loaded: " + passiveMembers.size());
         System.out.println("Competitive swimmers loaded: " + competitiveSwimmers.size());
->>>>>>> cf1ea7f (Added change)
-    }
+
+   }
 
     public List<Member> getAllMembers() {
         return allMembers;
@@ -80,9 +73,7 @@ public class gMemberController {
     public List<Member> getPassiveMembers() {
         return passiveMembers;
     }
-<<<<<<< HEAD
 }
-=======
 
     public List<Member> getcompetitiveSwimmers(){
         return competitiveSwimmers;
@@ -112,4 +103,3 @@ public class gMemberController {
 //        return competitiveSwimmers;
 //    }
 //}
->>>>>>> cf1ea7f (Added change)
