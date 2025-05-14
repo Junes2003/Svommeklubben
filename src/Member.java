@@ -142,6 +142,11 @@ public class Member {
                             "}",
                     memberID, name, dateOfBirth, memberType, swimmerType,
                     age, teamID, parentsNumber, parentsName
-                            >>>>>>> 45d6a20 (Gemmer lokale ændringer før rebase)
             );
         }
+
+    public Member() {
+    }
+
+    public Member() {
+    }
