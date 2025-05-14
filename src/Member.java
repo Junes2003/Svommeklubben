@@ -14,25 +14,7 @@ public class Member {
     private String parentsName;
 
     public Member(String name, String memberType, String swimmerType, int memberID, int age, int teamID, LocalDate dateOfBirth, String parentsNumber, String parentsName) {
-    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType,
-        int ageGroup, String parentsNumber, String parentsName, int teamID) {
-        }
-
-    public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int teamID, int age, String parentsNumber, String parentsName) {
-            this.memberID = memberID;
-            this.name = name;
-            this.memberType = memberType;
-            this.swimmerType = swimmerType;
-            this.memberID = memberID;
-            this.age = age;
-            this.teamID = teamID;
-            this.dateOfBirth = dateOfBirth;
-            this.parentsNumber = parentsNumber;
-            this.parentsName = parentsName;
-
-            this.dateOfBirth = dateOfBirth;
-            this.teamID = teamID;
-        }
+    }
 
     public Member(int memberID, String name, LocalDate dateOfBirth, String memberType, String swimmerType, int age, int teamID) {
             this.memberID = memberID;
@@ -138,15 +120,11 @@ public class Member {
                             "  teamID       = %d\n" +
                             "  parentsNumber= %s\n" +
                             "  parentsName  = '%s'\n" +
-                    "}", memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName
+                    "}", memberID, name, dateOfBirth, memberType, swimmerType, age, teamID, parentsNumber, parentsName,
                             "}",
                     memberID, name, dateOfBirth, memberType, swimmerType,
                     age, teamID, parentsNumber, parentsName
             );
         }
 
-    public Member() {
-    }
-
-    public Member() {
-    }
+        }
