@@ -52,13 +52,13 @@ public class MemberController {
 //        competitiveSwimmers = MemberCSVLoader.loadMembersFromCSV(competitiveFile);
 
 
-        MemberCSVLoader loader = new MemberCSVLoader(allFile);
-        loader.getAllMembers();
+//        MemberCSVLoader loader = new MemberCSVLoader(allFile);
+//        loader.getAllMembers();
 
         System.out.println("All members loaded: " + allMembers.size());
         System.out.println("Active members loaded: " + activeMembers.size());
         System.out.println("Passive members loaded: " + passiveMembers.size());
-        System.out.println("Competitive swimmers loaded: " + competitiveSwimmers.size());
+//        System.out.println("Competitive swimmers loaded: " + competitiveSwimmers.size());
 
     }
 
