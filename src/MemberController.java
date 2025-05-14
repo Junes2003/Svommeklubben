@@ -5,7 +5,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MemberController {
+public class gMemberController {
 
     private List<Member> allMembers;
     private List<Member> activeMembers;
