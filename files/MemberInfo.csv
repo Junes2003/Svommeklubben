@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1,Anna Jensen,2010-04-15,Junior,Active,true,14,101,22334455,Peter Jensen
 2,Emil Sørensen,2008-09-23,Junior,Passive,false,16,102,33445566,Lene Sørensen
 3,Frederik Hansen,2005-12-01,Senior,Active,true,19,103,,""
@@ -5,3 +6,25 @@
 5,Mads Petersen,2004-07-22,Senior,Active,true,20,105,,""
 11,Birgit Nielsen,1958-01-14,Veteran,Active,false,66,201,,""
 202,ade,2003-05-03,SENIOR,ACTIVE,true,22,202,,
+=======
+1,Anna Jensen,2010-04-15,Junior,Active,14,101,22334455,Peter Jensen
+2,Emil Sørensen,2008-09-23,Junior,Passive,16,102,33445566,Lene Sørensen
+3,Frederik Hansen,2005-12-01,Senior,Active,19,103,,""
+4,Sofie Madsen,2012-06-10,Junior,Passive,12,104,44556677,Henrik Madsen
+5,Mads Petersen,2004-07-22,Senior,Active,20,105,,""
+6,Ida Thomsen,2011-02-18,Junior,Passive,13,106,55667788,Lars Thomsen
+7,Lukas Kristensen,2009-11-05,Junior,Active,15,107,66778899,Marianne Kristensen
+8,Emma Olesen,2013-08-30,Junior,Passive,11,108,77889900,Anders Olesen
+9,Victor Mortensen,2006-03-12,Senior,Active,18,109,,""
+10,Clara Rasmussen,2007-05-27,Junior,Active,17,110,88990011,Mette Rasmussen
+11,Birgit Nielsen,1958-01-14,Veteran,Active,66,201,,""
+12,Jørgen Kristoffersen,1955-07-09,Veteran,Active,69,202,,""
+13,Karen Larsen,1962-10-22,Veteran,Active,62,203,,""
+14,Mathias Holm,2003-02-03,Senior,Passive,21,111,,""
+15,Nanna Jeppesen,2010-12-11,Junior,Passive,14,112,99001122,Søren Jeppesen
+16,Mikkel Laursen,2008-06-19,Junior,Active,16,113,10111213,Marie Laursen
+17,Julie Birk,2012-03-07,Junior,Passive,12,114,11121314,Thomas Birk
+18,Oscar Damgaard,2005-09-25,Senior,Active,19,115,,""
+19,Laura Bach,2006-11-16,Senior,Active,18,116,,""
+20,Alexander Bro,1961-08-02,Veteran,Active,63,204,,""
+>>>>>>> 3270fe87dee2d28047d177770dd8b9ec06e2882f
